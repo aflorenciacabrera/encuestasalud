@@ -52,7 +52,7 @@ class CreateEncuestasTable extends Migration
             $table->boolean('utensilios');
             $table->string('observaciones');
             $table->string('supervicion_menu');
-            $table->string('recomendaciones_GAPA');
+            $table->string('recomendaciones_gapa');
             $table->string('recomendaciones_macro_micronutrientes');
             $table->boolean('menu_vista');
             $table->string('foto_menu');
@@ -89,7 +89,7 @@ class CreateEncuestasTable extends Migration
             $table->string('promo_salud');
             $table->string('tematicas');
             $table->string('clase_estracurricular');
-            $table->boolean('programas_EAN');
+            $table->boolean('programas_ean');
             $table->string('materia_especifica_existente');
             //SECCIÓN G: EXPOSICIÓN A PUBLICIDAD DE ALIMENTOS Y BEBIDAS
             $table->boolean('publicidad_alimento');
