@@ -14,9 +14,16 @@ class EncuestaController extends Controller
           if($request->hasFile('photo'))
             {
                 $file = $request->file('photo');
-                $name = $file['tmp_name'];
-                $file->move(public_path().'/fotos/uploads',$name);
+                $name = $file->getClientOriginalName();
+                // print_r($file->getClientOriginalName());
+                $file->move(public_path().'/fotos/uploads/',$name);
+                echo "subido";
             }
+            else
+            {
+                echo "error";
+            }
+
     }
 
     public function recieve(request $request)
