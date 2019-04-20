@@ -16,8 +16,12 @@ class EncuestaController extends Controller
                 $file = $request->file('photo');
                 $name = $file->getClientOriginalName();
                 // print_r($file->getClientOriginalName());
-                $file->move(public_path().'/fotos/uploads/',$name);
-                echo "subido";
+               try {
+                    $file->move(public_path().'/fotos/uploads/',$name);
+               } catch (\Throwable $th) {
+                   throw $th;
+               }
+
             }
             else
             {
