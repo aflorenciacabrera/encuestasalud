@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/subir',"encuestaController@recieve");
+Route::post('/subirfoto',"encuestaController@recibirFoto");
