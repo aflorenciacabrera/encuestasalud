@@ -23,10 +23,6 @@ class EncuestaController extends Controller
                }
 
             }
-            else
-            {
-                echo "error";
-            }
 
     }
 
